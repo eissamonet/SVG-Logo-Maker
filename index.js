@@ -61,7 +61,7 @@ function writeToFile(fileName, data) {
     svgString += '${data.shape}';
 
     let shapeChoice;
-    if (answers.shape === 'Triangle') {
+    if (data.shape === 'Triangle') {
         shapeChoice = new Triangle();
         svgString += '<polygon points="150, 18 244, 182 56, 182" fill="${data.shape-color}"/>';
     } else if (data.shape ==='Square') {
@@ -93,9 +93,9 @@ const writeFile = data => {
 
 promptUser()
 .then((answers => {
-    if (answers.text.length > 3) {
+    if (data.text.length > 3) {
         console.log('Please enter no more than 3 characters');
     } else {
-        writeToFile('logo.svg', answers);
+        writeToFile('logo.svg', data);
     }
 }));
