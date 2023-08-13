@@ -1,9 +1,10 @@
 // packages for this application
-const inquirer = requirer('inquirer');
-const fs = require('fs');
 
+const inquirer = require("inquirer");
+const fs = require("fs");
 // importing shapes from shapes.js
-const { Circle, Triangle, Square} = require('./lib/shapes');
+const { Circle, Triangle, Square} = require("./lib/shapes");
+
 
 // Constructor class
 class svg{
@@ -21,6 +22,7 @@ class svg{
         this.textElement = '<text x="150" y="125" font-size="60" text-anchor="middle" fill="${color}">${text}</text>'
     }
 }
+
 
 // prompt user to answer questions
 
@@ -92,10 +94,11 @@ const writeFile = data => {
 };
 
 promptUser()
-.then((answers => {
+.then((data => {
     if (data.text.length > 3) {
         console.log('Please enter no more than 3 characters');
     } else {
         writeToFile('logo.svg', data);
     }
 }));
+
