@@ -52,7 +52,7 @@ node index.js.
 
 <img width="1440" alt="Screenshot 2023-08-14 at 5 57 14 PM" src="https://github.com/eissamonet/SVG-Logo-Maker/assets/133728858/cbe6f7ce-2d03-4e08-b2e5-445351efa5c1">
 
-You can also view a recording of the video, here: [SVG Logo Video](https://drive.google.com/file/d/1qv5hTnbU5wUlEJp16WHXDwp_sYoLhfAq/view)
+You can also view a recording of the video, here: [SVG Logo Maker](https://drive.google.com/file/d/1qv5hTnbU5wUlEJp16WHXDwp_sYoLhfAq/view)
 
 
 
