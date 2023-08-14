@@ -6,23 +6,6 @@ const fs = require("fs");
 const { Circle, Triangle, Square} = require("./lib/shapes");
 
 
-// Constructor class
-class svg{
-    constructor(){
-        this.textElement = ""
-        this.shapeElement = ""
-    }
-    render(){
-        return '<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">${this.shapeElement}${this.textElement}</svg'
-    }
-    setShapeElement(shape){
-        this.shapeElement = shape.render()
-    }
-    setTextElement(text, color){
-        this.textElement = '<text x="150" y="125" font-size="60" text-anchor="middle" fill="${color}">${text}</text>'
-    }
-}
-
 
 // prompt user to answer questions
 
@@ -80,25 +63,18 @@ function writeToFile(fileName, data) {
 
 };
     // fs to generate svg file
-
-const writeFile = data => {
-    fs.writeFile(fileName, svgString, err => {
-        if (err) {
-            console.log(err);
-            return;
-        } else {
-            console.log('Generated logo.svg!')
-        }
-        
-    })
-};
-
+    const writeFile = data => {
+    fs.writeFile('logo.svg', svgString, (err) => {
+        err ? console.log(err) : console.log('Generated logo.svg!');
+    });    
+    };
+    
 promptUser()
-.then((data => {
+    .then((data) => {
     if (data.text.length > 3) {
         console.log('Please enter no more than 3 characters');
     } else {
         writeToFile('logo.svg', data);
     }
-}));
+});
 
