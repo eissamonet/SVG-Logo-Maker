@@ -50,3 +50,7 @@ AND the output text "Generated logo.svg" is printed in the command line
 The application will be invoked by using the following command:
 node index.js.
 
+[svg.pdf](https://github.com/eissamonet/SVG-Logo-Maker/files/12340077/svg.pdf)
+
+
+
