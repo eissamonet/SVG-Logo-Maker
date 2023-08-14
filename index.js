@@ -31,12 +31,12 @@ const promptUser = () => {
         {
             type: 'input',
             name: 'text',
-            message: 'Enter up to 3 characters',
+            message: 'Text: Enter up to 3 characters',
         },
         {
             type: 'input',
             name: 'text-color',
-            message: 'Enter a color keyword (OR a hexadecimal number)',
+            message: 'Text Color: Enter a color keyword (OR a hexadecimal number)',
         },
         {   type: 'list',
             name: 'shape',
