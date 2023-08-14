@@ -50,7 +50,7 @@ AND the output text "Generated logo.svg" is printed in the command line
 The application will be invoked by using the following command:
 node index.js.
 
-<img width="1440" alt="Screenshot 2023-08-14 at 2 28 32 PM" src="https://github.com/eissamonet/SVG-Logo-Maker/assets/133728858/41aacbac-cae4-4d57-b48a-5295bc38ca3e">
+<img width="1440" alt="Screenshot 2023-08-14 at 5 57 14 PM" src="https://github.com/eissamonet/SVG-Logo-Maker/assets/133728858/cbe6f7ce-2d03-4e08-b2e5-445351efa5c1">
 
 
 
