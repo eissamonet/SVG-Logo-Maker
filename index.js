@@ -18,7 +18,7 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'text-color',
+            name: 'textColor',
             message: 'Text Color: Enter a color keyword (OR a hexadecimal number)',
         },
         {   type: 'list',
@@ -32,7 +32,7 @@ const promptUser = () => {
         },
         {
             type: 'input',
-            name: 'shape-color',
+            name: 'shapeColor',
             message: 'Enter your desired shape color (OR a hexadecimal number)',
         },
 
@@ -42,33 +42,31 @@ const promptUser = () => {
 function writeToFile(fileName, data) {
     let svgString = '';
     svgString = '<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">'
-    svgString += '<g>';
-    svgString += '${data.shape}';
+    svgString += `${data.shape}`;
 
     let shapeChoice;
     if (data.shape === 'Triangle') {
         shapeChoice = new Triangle();
-        svgString += '<polygon points="150, 18 244, 182 56, 182" fill="${data.shape-color}"/>';
+        svgString += `<polygon points="150, 18 244, 182 56, 182" fill="${data.shapeColor}"/>`;
     } else if (data.shape ==='Square') {
         shapeChoice = new Square();
-        svgString += '<rect x="73" y="40" width="160" height="160" fill="${data.shape-color}"/>';
+        svgString += `<rect x="73" y="40" width="160" height="160" fill="${data.shapeColor}"/>`;
     } else {
         shapeChoice = new Circle();
-        svgString += '<circle cx="150" cy="100" r="80" fill="${data.shape-color}"/>';
+        svgString += `<circle cx="150" cy="100" r="80" fill="${data.shapeColor}"/>`;
     }
 
-    svgString += '<text x="150" y="125" font-size="60" text-anchor="middle" fill="${data.text-color}">${data.text}</text>';
-    svgString += '<g>';
-    svgString += '</svg';
+    svgString += `<text x="150" y="125" font-size="20" text-anchor="middle" fill="${data.textColor}">${data.text}</text>`;
+    svgString += '</svg>';
 
-};
     // fs to generate svg file
-    const writeFile = data => {
     fs.writeFile('logo.svg', svgString, (err) => {
         err ? console.log(err) : console.log('Generated logo.svg!');
     });    
-    };
-    
+
+};
+
+
 promptUser()
     .then((data) => {
     if (data.text.length > 3) {
